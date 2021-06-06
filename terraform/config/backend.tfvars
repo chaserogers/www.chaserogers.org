@@ -1,0 +1,5 @@
+bucket = "terraform-state-20210606025428173000000001"
+dynamodb_table = "terraform-statelock"
+region = "us-west-2"
+role_arn = "arn:aws:iam::139431909992:role/TerraformRole"
+key = "www.chaserogers.org"
