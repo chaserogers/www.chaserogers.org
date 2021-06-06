@@ -1187,6 +1187,18 @@ ul.slides li {
 
 /** Responsive fixes **/
 @media screen and (max-width:767px) {
+	#open-button {
+		display: none;
+	}
+
+	.menu {
+		display: none;
+	}
+
+	.menu-wrap {
+		display: none;
+	}
+
 	.inner {
     padding-top: 10px;
     text-align: center;
