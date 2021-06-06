@@ -134,8 +134,8 @@
       <div class="row contact-details">
         <div class="col-md-4">
           <div class="dark-box box-hover">
-            <h2><i class="fa fa-map-marker"></i><span>Address</span></h2>
-            <p>4842 North St Louis Ave, Chicago</p>
+            <h2><i class="fa fa-map-marker"></i><span>Location</span></h2>
+            <p>Albany Park, Chicago</p>
           </div>
         </div>
 
@@ -218,7 +218,6 @@
     FOOTER SECTION END
     =========================== -->
 
-  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKjcY2GW3MVFXjBf9wGORjR0zGa0KCvVc&callback=initMap"> </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script type="text/javascript" src="assets/smoothscroll/smoothscroll.js"></script>
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
@@ -228,18 +227,23 @@
   <script src="js/modernizr.js"></script>
   <script src="assets/textrotator/jquery.simple-text-rotator.js"></script>
   <script src="assets/lightbox/js/lightbox.min.js"></script>
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeKBBPJTG3v5w3cNPAgM6ZsJiPyL1mP_o&amp;sensor=false"></script>
+  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKjcY2GW3MVFXjBf9wGORjR0zGa0KCvVc&callback=initMap"> </script>
   <script src="js/main.js"></script>
   <script src="js/script.js"></script>
 
-	<!-- GOOGLE MAPS DATA -->
+	<!-- GOOGLE MAPS -->
   <script type="text/javascript">
-    let map;
-
     function initMap() {
-      map = new google.maps.Map(document.getElementById("googlemaps"), {
-        center: { lat: -34.397, lng: 150.644 },
-        zoom: 15,
+      const albanyPark = { lat: 41.9683924807475, lng: -87.7130560659661 }
+
+      const map = new google.maps.Map(document.getElementById("googlemaps"), {
+        center: albanyPark,
+        zoom: 10,
+      });
+
+      const marker = new google.maps.Marker({
+        position: albanyPark,
+        map: map,
       });
     }
   </script>
