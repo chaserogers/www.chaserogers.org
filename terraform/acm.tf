@@ -5,11 +5,6 @@ resource "aws_acm_certificate" "default" {
   validation_method = "DNS"
 }
 
-data "aws_route53_zone" "default" {
-  name = var.domain_name
-  private_zone = false
-}
-
 resource "aws_route53_record" "validation_records" {
   for_each = {
     for dvo in aws_acm_certificate.default.domain_validation_options : dvo.domain_name => {

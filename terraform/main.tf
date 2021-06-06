@@ -27,3 +27,8 @@ provider "aws" {
     role_arn = "arn:aws:iam::${var.account_id}:role/TerraformRole"
   }
 }
+
+data "aws_route53_zone" "default" {
+  name = var.domain_name
+  private_zone = false
+}
