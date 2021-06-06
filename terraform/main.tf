@@ -32,7 +32,3 @@ data "aws_route53_zone" "default" {
   name = var.domain_name
   private_zone = false
 }
-
-resource "aws_cloudfront_origin_access_identity" "primary" {
-  comment = "Primary OAI used with cloudfront distros"
-}
