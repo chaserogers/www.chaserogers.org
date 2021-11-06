@@ -132,7 +132,7 @@
         <div class="col-md-4">
           <div class="dark-box box-hover">
             <h2><i class="fa fa-map-marker"></i><span>Location</span></h2>
-            <p>Albany Park, Chicago</p>
+            <p>Rogers Park, Chicago</p>
           </div>
         </div>
 
@@ -228,15 +228,15 @@
 	<!-- GOOGLE MAPS -->
   <script type="text/javascript">
     function initMap() {
-      const albanyPark = { lat: 41.9683924807475, lng: -87.7130560659661 }
+      const rogersPark = { lat: 42.00128259158041, lng: -87.66376799083758 }
 
       const map = new google.maps.Map(document.getElementById("googlemaps"), {
-        center: albanyPark,
+        center: rogersPark,
         zoom: 10,
       });
 
       const marker = new google.maps.Marker({
-        position: albanyPark,
+        position: rogersPark,
         map: map,
       });
     }
