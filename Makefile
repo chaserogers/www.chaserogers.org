@@ -4,9 +4,9 @@ www_distro_id = E33VQ9YG1NZC45
 www_bucket_uri = s3://www.chaserogers.org
 plan_file = crogers.plan
 
-deploy_site: build invalidate
+deploy_site: sync invalidate
 
-build:
+sync:
 	cd site && \
 	aws s3 sync . ${www_bucket_uri}
 
